@@ -1,0 +1,13 @@
+.video-wrapper {
+    margin-top: 2em;
+}
+
+.video-item-wrapper {
+    width: 480px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.video-title {
+    font-size: 15px;
+}

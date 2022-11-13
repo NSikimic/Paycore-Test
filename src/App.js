@@ -1,22 +1,20 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Search from './search';
+import Videos from './videos';
 
 function App() {
+  const [search, setSearch] = useState(null);
+  const videoSource = 'Youtube'; //Hardcoded but can be changed to another source based on user input
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Find a video
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Search setSearch={setSearch}/>
+        <Videos search={search} source={videoSource}/>
       </header>
     </div>
   );
